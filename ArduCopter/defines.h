@@ -85,6 +85,11 @@
 #define NORMAL_LEDS 0
 #define SAVE_TRIM_LEDS 1
 
+// ***********************************  Parameter Extension *****************
+#define MNT_AUTORTRCT_H 100 // cm
+#define MNT_AUTO_MODE 2 
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  Parameter Extension ^^^^^^^^^^^^^^^^^
+
 
 // Internal defines, don't edit and expect things to work
 // -------------------------------------------------------

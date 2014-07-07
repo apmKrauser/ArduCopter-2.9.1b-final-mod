@@ -42,6 +42,7 @@ public:
         k_tilt_roll = 2,                ///< pitch-roll
         k_pan_tilt_roll = 3,            ///< yaw-pitch-roll
     };
+    enum MAV_MOUNT_MODE usr_last_mmode;
 
     // MAVLink methods
     void                    configure_msg(mavlink_message_t* msg);
@@ -50,11 +51,13 @@ public:
     void                    set_roi_cmd(struct Location *target_loc);
     void                    configure_cmd();
     void                    control_cmd();
+    void                    auto_retract(bool retract_mount);
 
     // should be called periodically
     void                    update_mount_position();
     void                    update_mount_type(); ///< Auto-detect the mount gimbal type depending on the functions assigned to the servos
     void                    debug_output();      ///< For testing and development. Called in the medium loop.
+
     // Accessors
     enum MountType          get_mount_type() {
         return _mount_type;
@@ -62,10 +65,17 @@ public:
     // hook for eeprom variables
     static const struct AP_Param::GroupInfo        var_info[];
 
+	void                            set_mode(enum MAV_MOUNT_MODE mode);  // made public
+//	enum MAV_MOUNT_MODE				get_mode() {
+//		return (enum MAV_MOUNT_MODE)_mount_mode.get();
+//	}
+	//AP_Int8                         _mount_mode;  // made public
+
 private:
 
     //methods
-    void                            set_mode(enum MAV_MOUNT_MODE mode);
+
+//    void                            set_mode(enum MAV_MOUNT_MODE mode);
 
     void                            set_retract_angles(float roll, float tilt, float pan); ///< set mount retracted position
     void                            set_neutral_angles(float roll, float tilt, float pan);
@@ -105,7 +115,7 @@ private:
     AP_Int8                         _stab_tilt; ///< (1 = yes, 0 = no)
     AP_Int8                         _stab_pan;  ///< (1 = yes, 0 = no)
 
-    AP_Int8                         _mount_mode;
+   // AP_Int8                         _mount_mode;
     // RC_Channel for providing direct angular input from pilot
     AP_Int8                         _roll_rc_in;
     AP_Int8                         _tilt_rc_in;
@@ -123,5 +133,7 @@ private:
     AP_Vector3f                     _retract_angles; ///< retracted position for mount, vector.x = roll vector.y = tilt, vector.z=pan
     AP_Vector3f                     _neutral_angles; ///< neutral position for mount, vector.x = roll vector.y = tilt, vector.z=pan
     AP_Vector3f                     _control_angles; ///< GCS controlled position for mount, vector.x = roll vector.y = tilt, vector.z=pan
+
+	AP_Int8                         _mount_mode; 
 };
 #endif

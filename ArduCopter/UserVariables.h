@@ -16,9 +16,12 @@ int                 WiiDisplacementY=0;
 
 // byte = unsigned char
 
-int32_t remote_RPM;
+int16_t remote_RPM;
+uint8_t nano_frontlight_auto = 1;
+uint8_t nano_frontlight_on = 0;
 byte nanoRXi = 0;
 byte msg_toNano[msg_toNano_size] = {0};
 byte msg_fromNano[msg_fromNano_size] = {0};
+
 
 

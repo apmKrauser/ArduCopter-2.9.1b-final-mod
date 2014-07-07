@@ -451,6 +451,24 @@ const AP_Param::Info var_info[] PROGMEM = {
 	GSCALAR(heli_yaw_ff, "RATE_YAW_FF",            HELI_YAW_FF),
 #endif
 
+	// ***********************************  Parameter Extension *****************
+	
+	// @Param: MNT_AUTORTRCT_H
+    // @DisplayName: Mnt AutoRetract Hight
+    // @Description: retract gimbal mount below this hight(cm) (stabilize mode)
+    // @User: Standard
+    // @Range: 0 255
+	GSCALAR(mnt_autortrct_h, "MNT_AUTORTRCT_H",            MNT_AUTORTRCT_H),
+
+	// @Param: MNT_AUTO_MODE 
+    // @DisplayName: Mount Startup Mode
+    // @Description: set camera mount position after takeoff
+    // @User: Standard
+    // @Range: 0  = do nothing; 1 = neutral; 2 = rc_targeting
+	GSCALAR(mnt_auto_mode, "MNT_AUTO_MODE",            MNT_AUTO_MODE),
+
+	// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  Parameter Extension ^^^^^^^^^^^^^^^^^
+
     // RC channel
     //-----------
     // @Group: RC1_

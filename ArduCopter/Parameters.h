@@ -76,6 +76,12 @@ public:
         k_param_acro_trainer_enabled,
         k_param_pilot_velocity_z_max,   // 28
 
+		
+		// ***********************************  Parameter Extension *****************
+		k_param_mnt_autortrct_h = 45, // 0 - 255 cm in stabilize mode
+		k_param_mnt_auto_mode,  // 0 = do nothing; 1 = neutral; 2 = rc_targeting
+		// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  Parameter Extension ^^^^^^^^^^^^^^^^^
+
         // 65: AP_Limits Library
         k_param_limits = 65,
         k_param_gpslock_limit,
@@ -336,6 +342,11 @@ public:
 	AP_Float		heli_roll_ff;												// roll rate feed-forward
 	AP_Float		heli_yaw_ff;												// yaw rate feed-forward																			
 #endif
+
+	// ***********************************  Parameter Extension *****************
+    AP_Int8 mnt_autortrct_h;
+	AP_Int8 mnt_auto_mode;
+	// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  Parameter Extension ^^^^^^^^^^^^^^^^^
 
     // RC channels
     RC_Channel              rc_1;
