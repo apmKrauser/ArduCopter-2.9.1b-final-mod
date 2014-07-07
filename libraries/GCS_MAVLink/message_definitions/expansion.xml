@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<mavlink>
+	<enums>
+	  <enum name="MAV_CMD" >
+	    <!-- Camera Controller Mission Commands Enumeration -->
+	    <entry name="MAV_CMD_FRONTLIGHT" value="1">
+	      <description>Mission command for Lights.</description>
+	      <param index="1">0: Off, 1:On, 2: auto</param>
+	      <param index="2">Empty</param>
+		  <param index="3">Empty</param>
+		  <param index="4">Empty</param>
+		  <param index="5">Empty</param>
+		  <param index="6">Empty</param>
+		  <param index="7">Empty</param>		  
+        </entry>
+		</enum>
+	</enums>
+	<messages>
+		<message name="RPM_SENSOR" id="201">
+			<description>Head RPM</description>
+			<field name="rpm" type="int16_t">rpm</field>
+		</message> 	 
+	</messages>
+</mavlink>
+

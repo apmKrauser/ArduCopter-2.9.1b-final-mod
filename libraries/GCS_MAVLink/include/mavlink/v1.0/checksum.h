@@ -15,6 +15,7 @@ extern "C" {
 #define X25_INIT_CRC 0xffff
 #define X25_VALIDATE_CRC 0xf0b8
 
+#ifndef HAVE_CRC_ACCUMULATE
 /**
  * @brief Accumulate the X.25 CRC by adding one char at a time.
  *
@@ -24,7 +25,6 @@ extern "C" {
  * @param data new char to hash
  * @param crcAccum the already accumulated checksum
  **/
-#ifndef HAVE_CRC_ACCUMULATE
 static inline void crc_accumulate(uint8_t data, uint16_t *crcAccum)
 {
         /*Accumulate one byte of data into the CRC*/

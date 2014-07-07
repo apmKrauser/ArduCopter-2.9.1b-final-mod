@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
 <mavlink>
-     <include>common.xml</include>
+     <include>common.xml</include> 
+	 <include>expansion.xml</include>
+	 
      <!-- note that APM specific messages should use the command id
       range from 150 to 250, to leave plenty of room for growth
       of common.xml 
