@@ -179,7 +179,8 @@
 
 #if CONFIG_APM_HARDWARE == APM_HARDWARE_APM2
  #define COPTER_LED_1 AN4       // Motor or Aux LED
- #define COPTER_LED_2 AN5       // Motor LED or Beeper
+/// #define COPTER_LED_2 AN5       // Motor LED or Beeper
+ #define COPTER_LED_2 AN4       // Motor LED or Beeper
  #define COPTER_LED_3 AN6       // Motor or GPS LED
  #define COPTER_LED_4 AN7       // Motor LED
  #define COPTER_LED_5 AN8       // Motor LED
@@ -239,7 +240,7 @@
  # endif
 #elif CONFIG_SONAR_SOURCE == SONAR_SOURCE_ANALOG_PIN
  # ifndef CONFIG_SONAR_SOURCE_ANALOG_PIN
-  #  define CONFIG_SONAR_SOURCE_ANALOG_PIN A0
+  #  define CONFIG_SONAR_SOURCE_ANALOG_PIN A5
  # endif
 #else
  # warning Invalid value for CONFIG_SONAR_SOURCE, disabling sonar
@@ -320,14 +321,14 @@
  # define LOW_VOLTAGE                    9.6
 #endif
 #ifndef VOLT_DIV_RATIO
- # define VOLT_DIV_RATIO                 3.56
+ # define VOLT_DIV_RATIO                 4.947
 #endif
 
 #ifndef CURR_AMP_PER_VOLT
- # define CURR_AMP_PER_VOLT              27.32
+ # define CURR_AMP_PER_VOLT              42.0
 #endif
 #ifndef CURR_AMPS_OFFSET
- # define CURR_AMPS_OFFSET               0.0
+ # define CURR_AMPS_OFFSET               2.33
 #endif
 #ifndef HIGH_DISCHARGE
  # define HIGH_DISCHARGE                 1760
@@ -344,7 +345,7 @@
 // INPUT_VOLTAGE
 //
 #ifndef INPUT_VOLTAGE
- # define INPUT_VOLTAGE                  5.0
+ # define INPUT_VOLTAGE                  4.69
 #endif
 
 

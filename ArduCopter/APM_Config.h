@@ -2,7 +2,10 @@
 
 // Example config file. Take a look at config.h. Any term define there can be overridden by defining it here.
 
-//#define CONFIG_APM_HARDWARE APM_HARDWARE_APM2
+#define CONFIG_APM_HARDWARE APM_HARDWARE_APM2
+
+#define CONFIG_SONAR_SOURCE SONAR_SOURCE_ANALOG_PIN
+#define CONFIG_SONAR_SOURCE_ANALOG_PIN A5
 
 // Ordinary users should please ignore the following define.
 // APM2_BETA_HARDWARE is used to support early (September-October 2011) APM2
@@ -15,7 +18,7 @@
 //#define DMP_ENABLED ENABLED
 //#define SECONDARY_DMP_ENABLED ENABLED       // allows running DMP in parallel with DCM for testing purposes
 
-//#define FRAME_CONFIG QUAD_FRAME
+#define FRAME_CONFIG HELI_FRAME
 /*
  *  options:
  *  QUAD_FRAME

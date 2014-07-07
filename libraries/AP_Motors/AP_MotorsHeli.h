@@ -21,9 +21,9 @@
  #include "WProgram.h"
 #endif
 
-#define AP_MOTORS_HELI_SPEED_DEFAULT 125        // default servo update rate for helicopters
-#define AP_MOTORS_HELI_SPEED_DIGITAL_SERVOS 125 // update rate for digital servos
-#define AP_MOTORS_HELI_SPEED_ANALOG_SERVOS 125  // update rate for analog servos
+#define AP_MOTORS_HELI_SPEED_DEFAULT 70        // default servo update rate for helicopters
+#define AP_MOTORS_HELI_SPEED_DIGITAL_SERVOS 70 // update rate for digital servos
+#define AP_MOTORS_HELI_SPEED_ANALOG_SERVOS 60  // update rate for analog servos
 
 #define AP_MOTORS_HELI_NUM_SWASHPLATE_SERVOS 3
 

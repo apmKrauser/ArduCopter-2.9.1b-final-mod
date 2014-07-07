@@ -61,6 +61,7 @@ public:
 
 protected:
     uint16_t                _map_speed(uint16_t speed_hz) {
+		if (speed_hz > 130) speed_hz = 70;
         return 2000000UL / speed_hz;
     }
     static volatile uint32_t         _last_update; // Modified by interrupt
