@@ -661,11 +661,6 @@ static bool mavlink_try_send_message(mavlink_channel_t chan, enum ap_message id,
 #endif
         break;
 
-	case MSG_RPM_SENSOR:
-		mavlink_msg_named_value_int_send(chan, millis(), "RPM Sensor", remote_RPM);
-		//mavlink_msg_named_value_float_send(chan, mavlink_msg_debug_get_time_boot_ms
-        break;
-		
     case MSG_RETRY_DEFERRED:
         break; // just here to prevent a warning
     }

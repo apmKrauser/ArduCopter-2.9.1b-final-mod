@@ -143,7 +143,6 @@
 //
 FastSerialPort0(Serial);        // FTDI/console
 FastSerialPort1(Serial1);       // GPS port
-FastSerialPort2(Serial2);       // Communication With Arduino Nano
 FastSerialPort3(Serial3);       // Telemetry port
 
 // port to use for command line interface
