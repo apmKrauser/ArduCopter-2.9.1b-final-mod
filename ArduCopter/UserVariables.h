@@ -11,8 +11,8 @@ int                 WiiDisplacementX=0;
 int                 WiiDisplacementY=0;
 #endif
 
-#define msg_toNano_size 6
-#define msg_fromNano_size 3
+#define msg_toNano_size 9
+#define msg_fromNano_size 4
 
 // byte = unsigned char
 
