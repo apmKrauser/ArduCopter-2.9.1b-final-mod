@@ -110,10 +110,10 @@ void pack_msg_for_Nano()
 	byte ap_bitflags = 0;
 	uint16_t alt_by_sonar = 0;
 	uint16_t alt_over_home = 0;
-	if (ap.home_is_set) ap_bitflags |= 1 << 0;
-    if (motors.armed() == true) ap_bitflags |= 1 << 1;
-    if (nano_frontlight_auto) ap_bitflags |= 1 << 2;
-    if (nano_frontlight_on) ap_bitflags |= 1 << 3;
+	if (ap.home_is_set) ap_bitflags |= (1 << 0);
+    if (motors.armed() == true) ap_bitflags |= (1 << 1);
+    if (nano_frontlight_auto) ap_bitflags |= (1 << 2);
+    if (nano_frontlight_on) ap_bitflags |= (1 << 3);
 	alt_by_sonar = (uint16_t) sonar_alt;
 	alt_over_home = (uint16_t) (( current_loc.alt - home.alt ) / 100);
 	msg_toNano[0] = 0xFF;
